@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   }
   scope module: :public do
     root to: "homes#top"
-    resource :users, only: [:index, :show, :edit, :update]
+    resources :users, only: [:index, :show, :edit, :update]
   end
   
   devise_for :admin, controllers: {
