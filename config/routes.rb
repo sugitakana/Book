@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: "homes#top"
     resources :users, only: [:index, :show, :edit, :update]
-    resources :book
+    resources :books, only: [:new, :create, :index, :show, :edit, :update, :destroy]
   end
-  
+
   devise_for :admin, controllers: {
   sessions: "admin/sessions"
 }
